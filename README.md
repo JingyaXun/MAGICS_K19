@@ -1,37 +1,54 @@
-# 动手学深度学习
+# How to build your reading notes 
 
-[![Build Status](http://ci.d2l.ai/job/d2l-zh/job/master/badge/icon)](http://ci.d2l.ai/job/d2l-zh/job/master/)  
+This summer we will be working together to build a machine learning knowledge base using Jupyter Notebook and Sphnix. 
 
-[本书网址：zh.d2l.ai](https://zh.d2l.ai/) | [1.0.0版rc0发布](https://github.com/d2l-ai/d2l-zh/releases/tag/v1.0.0-rc0) | [如何安装和使用书中源代码](http://zh.d2l.ai/chapter_prerequisite/install.html)
+Each student will be assigned a specific topic to research in, during which he or she will organize the research reports and corresponding code implementations into Jupyter Notebook files. Each topic will turn into a chapter in the knowledge base. 
 
+We will be using [¨Kfñ¦f`](https://github.com/d2l-ai/d2l-zh) as a template. 
 
-## What's New
+Below is a step-by-step guide on how to create and publish a new chapter to the knowledge base. 
 
-纸质书6月1日首印12000册（精装&平装），上架两周已重印9500册（精装&平装）。为了感谢大家的支持，我们计划在6月29日（周六）上午直播《动手学深度学习》番外篇（第20课）：深度学习中的注意力机制。具体时间和参与方式会在本页面更新。
+1. clone the knowldge base from GitHub using
 
+1. ```
+   git clone git@github.com:JingyaXun/MAGICS_K19.git
+   ```
 
-## 英文版 *Dive into Deep Learning*
+2. create a new folder under ~/MAGICS_K19/build/ and save all your Jupyter Notebook files in there.
 
-加州大学伯克利分校 2019 年春学期 *Introduction to Deep Learning* 课程教材。
+3. Under ~/MAGICS_K19/build/[your folder]/ create **index.md** within your folder. Your index.md should be in the following format. See ~/MAGICS_K19/sample_topic as an example.
 
-开源地址：[https://github.com/d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
+   ```
+   # [your topic]
+   
+   [Add topic intro here.] 
+   
+   ```eval_rst
+   
+   .. toctree::
+      :maxdepth: 2
+   
+   	# add names of all your jupyter notebooks here (order matter)
+      [notebook1]
+      [notebook2]
+   
+   ```
+   ```
 
-### 英文版引用
+4. Open ~/MAGICS_K19/build/index.rst and add the following text to the end of the file
 
-BibTeX entry:
+   ```
+   [your folder]/index
+   ```
 
-```
-@book{zhang2019dive,
-    title={Dive into Deep Learning},
-    author={Aston Zhang and Zachary C. Lipton and Mu Li and Alexander J. Smola},
-    note={\url{http://www.d2l.ai}},
-    year={2019}
-}
-```
+5. Under ~/MAGICS_K19/build/ execute the following command in your terminal
 
+   ```
+   make html
+   ```
 
-## 贡献
+6. Next navigate to ~/MAGICS_K19/build/_build/html and click open **index.html**
 
-感谢[社区贡献者们](https://github.com/d2l-ai/d2l-zh/graphs/contributors)为每一位读者改进这本开源书。
+7. Now you should be able to see your topic in the knowledge base and your Jupyter Notebook files can be viewed within that topic
 
-[如何贡献](https://zh.d2l.ai/chapter_appendix/how-to-contribute.html) | [致谢](https://zh.d2l.ai/chapter_preface/preface.html#致谢) | [讨论或报告问题](https://discuss.gluon.ai) | [其他](INFO.md)
+   
