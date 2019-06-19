@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. 自然语言处理 &mdash; MAGICS Summer Reading 2019  文档</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/gluon_s2.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/google_analytics.js"></script>
+        <script type="text/javascript" src="../_static/discuss.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="1.1. 束搜索" href="beam-search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../chapter_preface/preface.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MAGICS Summer Reading 2019
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. 自然语言处理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="beam-search.html">1.1. 束搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attention.html">1.2. 注意力机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html">1.3. 机器翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../NLP/index.html">2. NLP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Robotics/index.html">3. Robotics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MAGICS Summer Reading 2019</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>1. 自然语言处理</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/topic_sample/index.md" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="id1">
+<h1>1. 自然语言处理<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>自然语言处理关注计算机与人类之间的自然语言交互。在实际中，我们常常使用自然语言处理技术，如“循环神经网络”一章中介绍的语言模型，来处理和分析大量的自然语言数据。本章中，根据输入与输出的不同形式，我们按“定长到定长”、“不定长到定长”、“不定长到不定长”的顺序，逐步展示在自然语言处理中如何表征并变换定长的词或类别以及不定长的句子或段落序列。</p>
+<p>我们先介绍如何用向量表示词，并在语料库上训练词向量。之后，我们把在更大语料库上预训练的词向量应用于求近义词和类比词，即“定长到定长”。接着，在文本分类这种“不定长到定长”的任务中，我们进一步应用词向量来分析文本情感，并分别基于循环神经网络和卷积神经网络为表征时序数据提供两种思路。此外，自然语言处理任务中很多输出是不定长的，如任意长度的句子或段落。我们将描述应对这类问题的编码器—解码器模型、束搜索和注意力机制，并动手实践“不定长到不定长”的机器翻译任务。</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="beam-search.html">1.1. 束搜索</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="beam-search.html#贪婪搜索">1.1.1. 贪婪搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beam-search.html#穷举搜索">1.1.2. 穷举搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beam-search.html#束搜索">1.1.3. 束搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beam-search.html#小结">1.1.4. 小结</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beam-search.html#练习">1.1.5. 练习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beam-search.html#扫码直达讨论区">1.1.6. 扫码直达讨论区</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="attention.html">1.2. 注意力机制</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="attention.html#计算背景变量">1.2.1. 计算背景变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attention.html#更新隐藏状态">1.2.2. 更新隐藏状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attention.html#发展">1.2.3. 发展</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attention.html#小结">1.2.4. 小结</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attention.html#练习">1.2.5. 练习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attention.html#参考文献">1.2.6. 参考文献</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attention.html#扫码直达讨论区">1.2.7. 扫码直达讨论区</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="machine-translation.html">1.3. 机器翻译</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html#读取和预处理数据">1.3.1. 读取和预处理数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html#含注意力机制的编码器—解码器">1.3.2. 含注意力机制的编码器—解码器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html#训练模型">1.3.3. 训练模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html#预测不定长的序列">1.3.4. 预测不定长的序列</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html#评价翻译结果">1.3.5. 评价翻译结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html#小结">1.3.6. 小结</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html#练习">1.3.7. 练习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html#参考文献">1.3.8. 参考文献</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine-translation.html#扫码直达讨论区">1.3.9. 扫码直达讨论区</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="beam-search.html" class="btn btn-neutral float-right" title="1.1. 束搜索" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../chapter_preface/preface.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017--2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

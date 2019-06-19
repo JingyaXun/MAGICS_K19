@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>动手学深度学习 &mdash; MAGICS Summer Reading 2019  文档</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/gluon_s2.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/google_analytics.js"></script>
+        <script type="text/javascript" src="_static/discuss.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MAGICS Summer Reading 2019
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="NLP/index.html">1. NLP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Robotics/index.html">2. Robotics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MAGICS Summer Reading 2019</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>动手学深度学习</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/README.md" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="id1">
+<h1>动手学深度学习<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="http://ci.d2l.ai/job/d2l-zh/job/master/"><img alt="http://ci.d2l.ai/job/d2l-zh/job/master/badge/icon" src="http://ci.d2l.ai/job/d2l-zh/job/master/badge/icon" />Build Status</a></p>
+<p><a class="reference external" href="https://zh.d2l.ai/">本书网址：zh.d2l.ai</a> | <a class="reference external" href="https://github.com/d2l-ai/d2l-zh/releases/tag/v1.0.0-rc0">1.0.0版rc0发布</a> | <a class="reference external" href="http://zh.d2l.ai/chapter_prerequisite/install.html">如何安装和使用书中源代码</a></p>
+<div class="section" id="what-s-new">
+<h2>What’s New<a class="headerlink" href="#what-s-new" title="永久链接至标题">¶</a></h2>
+<p>纸质书6月1日首印12000册（精装&amp;平装），上架两周已重印9500册（精装&amp;平装）。为了感谢大家的支持，我们计划在6月29日（周六）上午直播《动手学深度学习》番外篇（第20课）：深度学习中的注意力机制。具体时间和参与方式会在本页面更新。</p>
+</div>
+<div class="section" id="dive-into-deep-learning">
+<h2>英文版 <em>Dive into Deep Learning</em><a class="headerlink" href="#dive-into-deep-learning" title="永久链接至标题">¶</a></h2>
+<p>加州大学伯克利分校 2019 年春学期 <em>Introduction to Deep Learning</em> 课程教材。</p>
+<p>开源地址：<a class="reference external" href="https://github.com/d2l-ai/d2l-en">https://github.com/d2l-ai/d2l-en</a></p>
+<div class="section" id="id2">
+<h3>英文版引用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>BibTeX entry:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@book</span><span class="p">{</span><span class="n">zhang2019dive</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">Dive</span> <span class="n">into</span> <span class="n">Deep</span> <span class="n">Learning</span><span class="p">},</span>
+    <span class="n">author</span><span class="o">=</span><span class="p">{</span><span class="n">Aston</span> <span class="n">Zhang</span> <span class="ow">and</span> <span class="n">Zachary</span> <span class="n">C</span><span class="o">.</span> <span class="n">Lipton</span> <span class="ow">and</span> <span class="n">Mu</span> <span class="n">Li</span> <span class="ow">and</span> <span class="n">Alexander</span> <span class="n">J</span><span class="o">.</span> <span class="n">Smola</span><span class="p">},</span>
+    <span class="n">note</span><span class="o">=</span><span class="p">{</span>\<span class="n">url</span><span class="p">{</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">d2l</span><span class="o">.</span><span class="n">ai</span><span class="p">}},</span>
+    <span class="n">year</span><span class="o">=</span><span class="p">{</span><span class="mi">2019</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>贡献<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>感谢<a class="reference external" href="https://github.com/d2l-ai/d2l-zh/graphs/contributors">社区贡献者们</a>为每一位读者改进这本开源书。</p>
+<p><a class="reference external" href="https://zh.d2l.ai/chapter_appendix/how-to-contribute.html">如何贡献</a> | <a class="reference external" href="https://zh.d2l.ai/chapter_preface/preface.html#%E8%87%B4%E8%B0%A2">致谢</a> | <a class="reference external" href="https://discuss.gluon.ai">讨论或报告问题</a> | <a class="reference external" href="INFO">其他</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017--2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

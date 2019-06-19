@@ -1,0 +1,8 @@
+a.download {
+    &:before {
+        content: "file_download";
+        position: relative;
+        top: 5px;
+        margin-right: 5px;
+    }
+}
