@@ -4,7 +4,7 @@ This summer we will be working together to build a machine learning knowledge ba
 
 Each student will be assigned a specific topic to research in, during which he or she will organize the research reports and corresponding code implementations into Jupyter Notebook files. Each topic will turn into a chapter in the knowledge base. 
 
-We will be using [¨Kfñ¦f`](https://github.com/d2l-ai/d2l-zh) as a template. 
+We will be using [this](https://github.com/d2l-ai/d2l-zh) as a template. 
 
 Below is a step-by-step guide on how to create and publish a new chapter to the knowledge base. 
 
@@ -23,7 +23,7 @@ Below is a step-by-step guide on how to create and publish a new chapter to the 
    
    [Add topic intro here.] 
    
-   ```eval_rst
+   ```eval_rst
    
    .. toctree::
       :maxdepth: 2
@@ -32,7 +32,7 @@ Below is a step-by-step guide on how to create and publish a new chapter to the 
       [notebook1]
       [notebook2]
    
-   ```
+   ```
    ```
 
 4. Open ~/MAGICS_K19/build/index.rst and add the following text to the end of the file
